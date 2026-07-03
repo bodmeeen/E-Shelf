@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookReaderState">
+    <option name="recentBooks">
+      <list>
+        <RecentBook>
+          <option name="author" value="Вільям Ґібсон" />
+          <option name="lastOpenedTime" value="1783109909671" />
+          <option name="lastPage" value="5" />
+          <option name="path" value="$PROJECT_DIR$/SReader/my_book.epub" />
+          <option name="title" value="Нейромант" />
+          <option name="totalPages" value="12" />
+        </RecentBook>
+      </list>
+    </option>
+  </component>
+</project>
