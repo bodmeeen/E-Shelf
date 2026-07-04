@@ -55,3 +55,12 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# books format
+*.epub
+*.fb2
+*.mobi
+
+*.user
+
+TestBooks/

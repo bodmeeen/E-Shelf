@@ -8,11 +8,16 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="Fb2.Document" Version="2.5.0" />
+      <PackageReference Include="System.Text.Encoding.CodePages" Version="10.0.9" />
       <PackageReference Include="VersOne.Epub" Version="3.3.6" />
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="my_book.epub">
+      <None Update="TestBooks\fb_book.fb2">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="TestBooks\my_book.epub">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
     </ItemGroup>
