@@ -1,5 +1,6 @@
 ﻿using System.Text;
 using SReader;
+using SReader.Services;
 
 // активує підтримку Windows-1251 для коректного читання fb2
 Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
@@ -10,5 +11,4 @@ string inputPath = Console.ReadLine();
 inputPath = inputPath.Trim('\'', '"');
 
 string bookText = BookParser.ReadAnyBook(inputPath);
-Console.WriteLine(bookText);
-
+PageSeparator.Separator(bookText, inputPath);

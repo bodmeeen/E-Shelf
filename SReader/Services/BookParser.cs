@@ -5,6 +5,7 @@ using System.Net;
 using Fb2.Document;
 using System.Linq;
 using System.Text;
+
 public class BookParser
 { 
     public static string ReadAnyBook(string filepath)

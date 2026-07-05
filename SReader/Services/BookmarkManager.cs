@@ -1,6 +1,5 @@
 using System.Text.Json;
 using SReader.Models;
-using System.IO;
 namespace SReader.Services;
 
 public class BookmarkManager
@@ -14,6 +13,10 @@ public class BookmarkManager
 
     public static Bookmark DeSerializeBookmark()
     {
+        if (!File.Exists("bookmarks.json"))
+        {
+            return null;
+        }
         string json = File.ReadAllText("bookmarks.json");
         return JsonSerializer.Deserialize<Bookmark>(json);
     }
