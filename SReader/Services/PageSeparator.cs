@@ -9,7 +9,7 @@ public class PageSeparator
         int pageSize = 1500;
         int currentPosInText = 0;
 
-        Bookmark savedBookmark = BookmarkManager.DeSerializeBookmark();
+        Bookmark savedBookmark = BookmarkManager.GetBookmark(bookPath);
 
         if (savedBookmark != null && savedBookmark.BookPath == bookPath)
         {
@@ -43,7 +43,7 @@ public class PageSeparator
                 myBookmark.BookPath = bookPath;
                 myBookmark.SymbolIndex = currentPosInText; // на якому символі зупинились
                 
-                BookmarkManager.SerializeBookmark(myBookmark); // запис у файл bookmarks.json
+                BookmarkManager.SaveBookmark(myBookmark); // запис у файл bookmarks.json
                 
                 break;
             } 
