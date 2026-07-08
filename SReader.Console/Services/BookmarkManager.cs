@@ -1,6 +1,7 @@
     using System.Text.Json;
-using SReader.Models;
-namespace SReader.Services;
+    using SReader.Console.Models;
+
+    namespace SReader.Console.Services;
 
 public class BookmarkManager
 {

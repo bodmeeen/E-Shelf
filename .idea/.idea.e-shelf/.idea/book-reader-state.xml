@@ -5,6 +5,13 @@
       <list>
         <RecentBook>
           <option name="author" value="Вільям Ґібсон" />
+          <option name="lastOpenedTime" value="1783510142512" />
+          <option name="path" value="$PROJECT_DIR$/SReader/bin/Debug/net10.0/TestBooks/fb_book.fb2" />
+          <option name="title" value="Нейромант" />
+          <option name="totalPages" value="38" />
+        </RecentBook>
+        <RecentBook>
+          <option name="author" value="Вільям Ґібсон" />
           <option name="lastOpenedTime" value="1783176388217" />
           <option name="path" value="$PROJECT_DIR$/SReader/Nieiromant - Vil'iam G'ibson.fb2" />
           <option name="title" value="Нейромант" />

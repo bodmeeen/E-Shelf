@@ -1,4 +1,6 @@
-namespace SReader;
+using System.IO;
+
+namespace SReader.Console;
 using VersOne.Epub;
 using System.Text.RegularExpressions;
 using System.Net;
@@ -31,7 +33,7 @@ private static string ReadTxt(string filepath)
 private static string ReadEpubBook(string filepath)
 {
     EpubBook book = EpubReader.ReadBook(filepath);
-    Console.WriteLine($"Title: {book.Title},  Author: {book.Author}\n");
+    System.Console.WriteLine($"Title: {book.Title},  Author: {book.Author}\n");
 
     StringBuilder fullBookText = new StringBuilder();
     

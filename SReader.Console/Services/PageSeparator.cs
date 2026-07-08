@@ -1,7 +1,6 @@
-using SReader.Models;
-using SReader.Services;
+using SReader.Console.Models;
 
-namespace SReader.Services;
+namespace SReader.Console.Services;
 
 public class PageSeparator
 {
@@ -17,8 +16,8 @@ public class PageSeparator
             currentPosInText = savedBookmark.SymbolIndex;
         }
         
-        Console.WriteLine("Press any key to continue from the bookmark, or R to start over");
-        var keyStart = Console.ReadKey().Key;
+        System.Console.WriteLine("Press any key to continue from the bookmark, or R to start over");
+        var keyStart = System.Console.ReadKey().Key;
         if (keyStart == ConsoleKey.R)
         {
             var bookIsOver = BookmarkManager.GetBookmark(bookPath);
@@ -31,8 +30,8 @@ public class PageSeparator
         {
             if (currentPosInText >= bookText.Length)
             {
-                Console.WriteLine("The book is over! Press Q to exit or Y to start over");
-                var key2  = Console.ReadKey().Key;
+                System.Console.WriteLine("The book is over! Press Q to exit or Y to start over");
+                var key2  = System.Console.ReadKey().Key;
                 if (key2 == ConsoleKey.Y)
                 {
                     var bookIsOver = BookmarkManager.GetBookmark(bookPath);
@@ -48,12 +47,12 @@ public class PageSeparator
             
             int charsToTake = Math.Min(pageSize, bookText.Length - currentPosInText);
 
-            Console.Clear();
+            System.Console.Clear();
             string page =  bookText.Substring(currentPosInText, charsToTake);
-            Console.WriteLine(page);
+            System.Console.WriteLine(page);
             
-            Console.WriteLine("\n[Press any key to go to the next page, or Q to exit]");
-            var key = Console.ReadKey().Key;
+            System.Console.WriteLine("\n[Press any key to go to the next page, or Q to exit]");
+            var key = System.Console.ReadKey().Key;
             if (key == ConsoleKey.Q)
             {
                 Bookmark myBookmark = new Bookmark();

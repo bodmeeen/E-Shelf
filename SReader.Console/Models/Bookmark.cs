@@ -1,4 +1,4 @@
-namespace SReader.Models;
+namespace SReader.Console.Models;
 
 public class Bookmark
 {

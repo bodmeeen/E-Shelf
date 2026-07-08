@@ -1,0 +1,11 @@
+﻿<Solution>
+  <Project Path="SReader.GUI.Android/SReader.GUI.Android.csproj">
+    <Deploy />
+  </Project>
+  <Project Path="SReader.GUI.Browser/SReader.GUI.Browser.csproj" />
+  <Project Path="SReader.GUI.Desktop/SReader.GUI.Desktop.csproj" />
+  <Project Path="SReader.GUI.iOS/SReader.GUI.iOS.csproj">
+    <Deploy />
+  </Project>
+  <Project Path="SReader.GUI/SReader.GUI.csproj" />
+</Solution>
