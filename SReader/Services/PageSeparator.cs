@@ -1,4 +1,5 @@
 using SReader.Models;
+using SReader.Services;
 
 namespace SReader.Services;
 
@@ -10,26 +11,42 @@ public class PageSeparator
         int currentPosInText = 0;
 
         Bookmark savedBookmark = BookmarkManager.GetBookmark(bookPath);
-
+        
         if (savedBookmark != null && savedBookmark.BookPath == bookPath)
         {
             currentPosInText = savedBookmark.SymbolIndex;
+        }
+        
+        Console.WriteLine("Press any key to continue from the bookmark, or R to start over");
+        var keyStart = Console.ReadKey().Key;
+        if (keyStart == ConsoleKey.R)
+        {
+            var bookIsOver = BookmarkManager.GetBookmark(bookPath);
+            bookIsOver.SymbolIndex = 0;
+            BookmarkManager.SaveBookmark(bookIsOver);
+            currentPosInText = 0;
         }
 
         while (true)
         {
             if (currentPosInText >= bookText.Length)
             {
-                Console.WriteLine("The book is over");
+                Console.WriteLine("The book is over! Press Q to exit or Y to start over");
+                var key2  = Console.ReadKey().Key;
+                if (key2 == ConsoleKey.Y)
+                {
+                    var bookIsOver = BookmarkManager.GetBookmark(bookPath);
+                    bookIsOver.SymbolIndex = 0;
+                    BookmarkManager.SaveBookmark(bookIsOver);
+                    currentPosInText = 0;
+                }
+                else
+                {
+                    break;
+                }
             }
             
             int charsToTake = Math.Min(pageSize, bookText.Length - currentPosInText);
-
-            // if (currentPosInText + charsToTake > bookText.Length)  // цей блок не потрібен (дублює int charsToTake)
-            // {
-            //     Console.WriteLine("The book has ended");
-            //     break;
-            // }
 
             Console.Clear();
             string page =  bookText.Substring(currentPosInText, charsToTake);
@@ -49,6 +66,6 @@ public class PageSeparator
             } 
             
             currentPosInText += charsToTake;
-        }
+        }   
     }
 }

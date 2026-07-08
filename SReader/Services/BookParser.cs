@@ -16,7 +16,6 @@ public class BookParser
         return ReadEpubBook(filepath);
     else if  (filepath.EndsWith(".fb2"))
         return ReadFb2Book(filepath);
-
     else
     {
         return "This format is not supported";
@@ -65,7 +64,6 @@ private static string ReadFb2Book(string filepath)
     {
         // в fb2 заголовок може містити форматування, тому потрібно перетворити все в чистий рядок
         var titleText = fb2Document.Title.ToString() ?? "The title is not specified";
-        Console.WriteLine($"Title: {titleText}\n");
     }
 
     var mainBody = fb2Document.Bodies?.FirstOrDefault(); // перший елемент в fb2 це сам текст
