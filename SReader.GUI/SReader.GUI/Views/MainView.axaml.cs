@@ -55,19 +55,6 @@ public partial class MainView : UserControl
 
                 // отримання потоку даних від системи
                 await using var fileStream = await selectedFile.OpenReadAsync();
-
-                // // створення тимчасового шляху у внутрішній пам'яті додатку
-                // string tempFilePath = Path.Combine(Path.GetTempPath(), selectedFile.Name);       // це уже не потрібно, бо це код для копіювання файлів перед читанням
-                //
-                // // копіювання книги в тимчасовий файл (щоб обійти обмеження Scoped Storage)
-                // await using (var tempFileStream = File.Create(tempFilePath))
-                // {
-                //     await fileStream.CopyToAsync(tempFileStream);
-                // }
-                //
-                // // тепер передаємо чистий та безпечний шлях парсеру  
-                // string text = BookParser.ReadAnyBook(tempFilePath);
-                // var bookmark = BookmarkManager.GetBookmark(tempFilePath);
                 
                 string fileName = selectedFile.Name; // передача в BookParser 
                 

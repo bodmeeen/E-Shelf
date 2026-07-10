@@ -29,14 +29,6 @@ public class BookParser
         }
     }
 
-    // private static string FileStreamReader(Stream fileStream, string fileName)
-    // {
-    //     using (StreamReader streamReader = new StreamReader(fileStream))
-    //     {
-    //         return streamReader.ReadToEnd();
-    //     }
-    // }
-
     private static string ReadTxt(Stream fileStream)
     {
         using (StreamReader streamReader = new StreamReader(fileStream))
