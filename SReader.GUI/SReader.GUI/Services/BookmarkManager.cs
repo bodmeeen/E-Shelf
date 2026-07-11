@@ -3,6 +3,7 @@
     using System.Linq;
     using System.Text.Json;
     using SReader.Console.Models;
+    using Microsoft.Data.Sqlite;
 
     namespace SReader.Console.Services;
 

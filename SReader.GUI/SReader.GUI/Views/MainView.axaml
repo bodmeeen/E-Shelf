@@ -2,16 +2,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="SReader.GUI.Views.MainView">
     
-    <Grid RowDefinitions="Auto, *">
-        <Button Grid.Row="0" 
-                Content="Відкрити книгу" 
-                Click="OnOpenBookClicked" 
-                Margin="10" 
-                HorizontalAlignment="Center"/>
+    <Grid RowDefinitions="Auto, *, Auto">
+        <TextBlock Grid.Row="0" Text="E-Shelf" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25" />
         
         <ListBox Name="BookListBox" 
                  Grid.Row="1" 
-                 Margin="10"
+                 Margin="20"
                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListBox.ItemTemplate>
                 <DataTemplate>
@@ -22,6 +18,19 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        
+        <Button Grid.Row="2"
+                Content="+" 
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                FontSize="35"
+                Click="OnOpenBookClicked"
+                Width="60"
+                Height="60"
+                Margin="0,0,30,20"
+                CornerRadius="15"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Right"/>
     </Grid>
 
 </UserControl>

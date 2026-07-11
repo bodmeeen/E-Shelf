@@ -16,6 +16,7 @@
     <PackageVersion Include="Avalonia.Android" Version="12.0.5" />
     <PackageVersion Include="CommunityToolkit.Mvvm" Version="8.4.0" />
     <PackageVersion Include="Fb2.Document" Version="2.5.0" />
+    <PackageVersion Include="Microsoft.Data.Sqlite" Version="11.0.0-preview.5.26302.115" />
     <PackageVersion Include="VersOne.Epub" Version="3.3.6" />
     <PackageVersion Include="Xamarin.AndroidX.Core.SplashScreen" Version="1.0.1.15" />
   </ItemGroup>

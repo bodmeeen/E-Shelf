@@ -20,6 +20,7 @@
     </PackageReference>
     <PackageReference Include="CommunityToolkit.Mvvm" />
     <PackageReference Include="Fb2.Document" />
+    <PackageReference Include="Microsoft.Data.Sqlite" />
     <PackageReference Include="VersOne.Epub" />
   </ItemGroup>
 </Project>
