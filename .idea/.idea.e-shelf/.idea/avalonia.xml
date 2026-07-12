@@ -3,7 +3,11 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="SReader.GUI/SReader.GUI/App.axaml" value="SReader.GUI/SReader.GUI.Desktop/SReader.GUI.Desktop.csproj" />
         <entry key="SReader.GUI/SReader.GUI/Views/MainView.axaml" value="SReader.GUI/SReader.GUI.Desktop/SReader.GUI.Desktop.csproj" />
+        <entry key="SReader.GUI/SReader.GUI/Views/MainWindow.axaml" value="SReader.GUI/SReader.GUI.Desktop/SReader.GUI.Desktop.csproj" />
+        <entry key="SReader.GUI/SReader.GUI/Views/ReaderView.axaml" value="SReader.GUI/SReader.GUI.Desktop/SReader.GUI.Desktop.csproj" />
+        <entry key="SReader.GUI/SReader.GUI/Views/ShelfView.axaml" value="SReader.GUI/SReader.GUI.Desktop/SReader.GUI.Desktop.csproj" />
       </map>
     </option>
   </component>
