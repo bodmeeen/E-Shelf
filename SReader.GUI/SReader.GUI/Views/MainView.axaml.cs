@@ -1,6 +1,8 @@
+using System;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
+using Avalonia.Threading;
 
 namespace SReader.GUI.Views;
 
@@ -18,7 +20,16 @@ public partial class MainView : UserControl
         // коли в ShelfView спрацює BookOpened?.Invoke(paragraphs) то виконати
         shelfView.BookOpened += (paragraphs) =>
         {
-            ScreenContainer.Content = new ReaderView(paragraphs);
+            Dispatcher.UIThread.Post(() =>
+            {
+                var readerView = new ReaderView(paragraphs); // створення читалки та перенесення її в змінну
+
+                readerView.BackRequested += () =>
+                {
+                    ShowShelf();
+                };
+                ScreenContainer.Content = readerView;
+            });
         };
         ScreenContainer.Content = shelfView;
     }
