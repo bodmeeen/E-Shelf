@@ -15,6 +15,10 @@ public partial class App : Application
     {
         AvaloniaXamlLoader.Load(this);
     }
+    
+    // глобаний розмір екрану
+    public static double ScreenHeight { get; set; }
+    public static double ScreenWidth { get; set; }
 
     public override void OnFrameworkInitializationCompleted()
     {

@@ -5,35 +5,35 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="SReader.GUI.Views.ReaderView">
     <Grid>
-     <ListBox Name="BookListBox"
-              Tapped="OnTextTapped"
-              Background="Transparent"
-              Margin="20"
-             ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-         <ListBox.ItemTemplate>
-            <DataTemplate>
-                <TextBlock Text="{Binding}" 
-                           TextWrapping="Wrap" 
-                           Margin="0,0,0,12" 
-                           FontSize="16"/>
-            </DataTemplate>
-        </ListBox.ItemTemplate>
-    </ListBox>
+        <ListBox Name="BookListBox"
+                 Tapped="OnTextTapped"
+                 Background="Transparent"
+                 Margin="20"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" 
+                               TextWrapping="Wrap" 
+                               Margin="0,0,0,12" 
+                               FontSize="16"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
         
-    <Button
-        Name="BackButton"
-        Content="←" 
-        HorizontalContentAlignment="Center"
-        VerticalContentAlignment="Center"
-        FontSize="45"
-        IsVisible="False"
-        Click="BackToMainScreen"
-        Width="60"
-        Height="60"
-        Margin="30,20,0,0"
-        CornerRadius="15"
-        VerticalAlignment="Top"
-        HorizontalAlignment="Left" />
+        <Button
+            Name="BackButton"
+            Content="←" 
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            FontSize="45"
+            IsVisible="False"
+            Click="BackToMainScreen"
+            Width="60"
+            Height="60"
+            Margin="30,20,0,0"
+            CornerRadius="15"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left" />
     
     </Grid>
 </UserControl>
